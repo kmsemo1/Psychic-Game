@@ -31,7 +31,7 @@ function updatenumberGuesses() {
 // user types a letter
 document.onkeyup = function(event) {
 // which key user typed
-var userInput = event.key();
+var userInput = event.onkeydown();
 document.getElementById('past guesses').innerHTML = "Past Guesses: " + userInput;
 
 // compare the two letters
