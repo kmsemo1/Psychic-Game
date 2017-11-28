@@ -31,7 +31,8 @@ function updatenumberGuesses() {
 // user types a letter
 document.onkeyup = function(event) {
 // which key user typed
-var userInput = event.toLowerCase();
+var userInput = event.key();
+document.getElementById('past guesses').innerHTML = "Past Guesses: " + userInput;
 
 // compare the two letters
 if (userInput === alphabet) {
@@ -43,6 +44,3 @@ if (userInput === alphabet) {
     numberGuesses--;
 }
 };
-
-
-
